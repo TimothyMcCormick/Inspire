@@ -1,0 +1,27 @@
+/* BASIC STYLES HERE */
+body{
+  
+  background-repeat: no-repeat;
+  background-size: 150vh;
+  background-position: center;
+}
+
+h1{
+  font-size: 70pt;
+}
+
+h2{
+  font-size: 36pt;
+}
+
+input{
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.no-outline:focus{
+  outline: none;
+}

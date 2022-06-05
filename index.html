@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Inspire</title>
+</head>
+
+<body class="bg-dark" id="bg-image">
+  
+  <header>
+    
+  </header>
+  <main>
+    <div class="container-fluid" >
+      <div class="row text-end">
+        <h3 class="text-light p-2 selectable" onclick="app.weatherController.getCelsius()" id="fahrenheit"></h3>
+      </div>
+      <div class="row text-center">
+        <h1 class="text-light" id="current-time"></h1>
+        <h2 class="text-light">Good morning</h2>
+      </div>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-12">
+
+          <h3 class="text-light text-center m-3 p-2">What would you like to do today?</h3>
+          <form class="d-flex justify-content-center" onsubmit="app.toDosController.createToDo()">
+                <input name="description" id="description" type="text">
+                
+              </form>
+                
+        </div>
+      </div>
+
+      <div class="row p-2">
+              
+            </div>
+            <div class="row p-2 justify-content-end">
+              <div class="col-md-3 bg-dark border-dark rounded elevation-2 d-flex flex-column"  id="todos">
+
+              </div>
+            </div>
+      <div class="row fixed-bottom">
+        <div class="col-md-3 m-2">
+          <h5 class="text-light">Phoenix, AZ</h5>
+          <h5 class="text-light">Wherever You Want</h5>
+        </div>
+        <div class="col-md-5 p-0 d-flex justify-content-center flex-column">
+          <h5 class="text-light text-center" id="quote"></h5>
+          <p class="text-light text-center on-hover" id="quote-author"></p>
+        </div>
+      </div>
+      
+      
+        
+    </div>
+  </main>
+  <footer>
+    
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
