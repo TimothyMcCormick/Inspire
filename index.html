@@ -14,22 +14,27 @@
   <title>Inspire</title>
 </head>
 
-<body class="bg-dark" id="bg-image">
+<body>
   
   <header>
     
   </header>
   <main>
     <div class="container-fluid" >
-      <div class="row text-end">
-        <h3 class="text-light p-2 selectable" onclick="app.weatherController.getCelsius()" id="fahrenheit"></h3>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-end">
+          <button class="btn btn-dark m-2" onclick="app.weatherController.getFahrenheit()">°F</button>
+          <button class="btn btn-dark m-2" onclick="app.weatherController.getCelsius()">°C</button>
+        <h3 class="text-light m-2" id="temp"></h3>
       </div>
-      <div class="row text-center">
-        <h1 class="text-light" id="current-time"></h1>
-        <h2 class="text-light">Good morning</h2>
       </div>
-      <div class="row align-items-center justify-content-center">
-        <div class="col-md-12">
+      
+      
+      <div class="col-12 d-flex flex-column align-items-center justify-content-center">
+        <h1 class="text-light text-center" id="current-time"></h1>
+        
+      
+        
 
           <h3 class="text-light text-center m-3 p-2">What would you like to do today?</h3>
           <form class="d-flex justify-content-center" onsubmit="app.toDosController.createToDo()">
@@ -37,31 +42,30 @@
                 
               </form>
                 
-        </div>
+        
       </div>
 
-      <div class="row p-2">
-              
-            </div>
-            <div class="row p-2 justify-content-end">
-              <div class="col-md-3 bg-dark border-dark rounded elevation-2 d-flex flex-column"  id="todos">
-
-              </div>
-            </div>
-      <div class="row fixed-bottom">
+      
+            
+      <div class="row fixed-bottom justify-content-between align-items-center">
         <div class="col-md-3 m-2">
-          <h5 class="text-light">Phoenix, AZ</h5>
-          <h5 class="text-light">Wherever You Want</h5>
+          <h5 class="text-light">Image By:</h5>
+          <h5 class="text-light" id="img-author"></h5>
         </div>
-        <div class="col-md-5 p-0 d-flex justify-content-center flex-column">
+        <div class="col-md-4 m-2">
           <h5 class="text-light text-center" id="quote"></h5>
           <p class="text-light text-center on-hover" id="quote-author"></p>
         </div>
+        <div class="col-md-3 m-2">
+        <h3 class="text-light text-end">Tasks</h3>
+        <div class="bg-dark border-dark rounded elevation-2 d-flex flex-column p-2"  id="todos">
       </div>
+    </div>
+    </div>
+            </div>
       
       
         
-    </div>
   </main>
   <footer>
     

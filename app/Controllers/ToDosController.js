@@ -1,6 +1,6 @@
 import { ProxyState } from "../AppState.js";
 import { ToDo } from "../Models/ToDo.js";
-import { toDosService } from "../Services/TodosService.js";
+import { toDosService } from "../Services/ToDosService.js";
 import { Pop } from "../Utils/Pop.js";
 
 
@@ -44,17 +44,31 @@ export class ToDosController{
     }
   }
 
-  
-
-    
-    
-  
-  async deleteToDo(id){
+  async completedToDo(id){
     try {
-      await toDosService.deleteToDo(id)
+      await toDosService.completedToDo(id)
     } catch (error) {
       console.error(error);
       Pop.toast(error.message, 'error')
     }
   }
+
+  async deleteToDo(id){
+    try {
+      if(await Pop.confirm('Are you sure?')){
+
+        await toDosService.deleteToDo(id)
+      }
+    } catch (error) {
+      console.error(error);
+      Pop.toast(error.message, 'error')
+    }
+  }
+
+  
+  
 }
+
+    
+    
+  

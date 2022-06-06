@@ -1,8 +1,7 @@
 /* BASIC STYLES HERE */
 body{
-  
+  background-size: cover;
   background-repeat: no-repeat;
-  background-size: 150vh;
   background-position: center;
 }
 

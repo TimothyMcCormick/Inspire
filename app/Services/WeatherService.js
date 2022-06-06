@@ -13,13 +13,13 @@ class WeatherService{
     const res = await sandboxApi.get('weather')
     console.log('get fahrenheit', res.data);
     let fahrenheit = ((res.data.main.temp - 273.15) * 1.8) + 32
-    document.getElementById('fahrenheit').innerText = fahrenheit.toFixed().toString() + '°'
+    document.getElementById('temp').innerText = fahrenheit.toFixed().toString() + '°F'
   }
   async getCelsius() {
     const res = await sandboxApi.get('weather')
     console.log('get celsius', res.data);
     let celsius = res.data.main.temp - 273.15
-    document.getElementById('fahrenheit').innerText = celsius.toFixed().toString() + '°'
+    document.getElementById('temp').innerText = celsius.toFixed().toString() + '°C'
   }
   
 

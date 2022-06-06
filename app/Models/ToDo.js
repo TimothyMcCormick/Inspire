@@ -5,16 +5,27 @@
 
 export class ToDo{
   constructor(data){
+    this.id = data.id
     this.description = data.description
+    this.completed = data.completed || false
   }
 
 
   get Template(){
     return`
     
-      <ol class="d-flex justify-content-between">
-        <li class="text-light"><span class=" p-2">${this.description}<i class="selectable mdi mdi-trash-can" onclick="app.toDosController.deleteToDo('')"><i class=" selectable mdi mdi-pencil"></i></i></span></li>
-      </ol>
+    <div class="text-light">
+      <input type="checkbox" ${this.completed ? 'checked' : ''} onclick="app.toDosController.completedToDo('${this.id}')">
+      
+      ${this.description}
+
+      <span><i class=" selectable mdi mdi-trash-can" onclick="app.toDosController.deleteToDo('${this.id}')"></i></span>
+      </label>
+    </div>
+    
+    
+    
+      
     `
   }
 }
