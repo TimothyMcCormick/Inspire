@@ -18,6 +18,7 @@ input{
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
+  border-color: white;
   background-color: rgba(0, 0, 0, 0);
 }
 
